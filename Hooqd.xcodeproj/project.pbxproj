@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F75E0561D748D6500168F87 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F75E0551D748D6500168F87 /* DataService.swift */; };
 		4FE71FF11D7105690090F88F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE71FF01D7105690090F88F /* AppDelegate.swift */; };
 		4FE71FF31D7105690090F88F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE71FF21D7105690090F88F /* ViewController.swift */; };
 		4FE71FF61D7105690090F88F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE71FF41D7105690090F88F /* Main.storyboard */; };
@@ -14,6 +15,9 @@
 		4FE71FFB1D7105690090F88F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FE71FF91D7105690090F88F /* LaunchScreen.storyboard */; };
 		4FE720061D7105690090F88F /* HooqdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE720051D7105690090F88F /* HooqdTests.swift */; };
 		4FE720111D7105690090F88F /* HooqdUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE720101D7105690090F88F /* HooqdUITests.swift */; };
+		4FE720201D7105CD0090F88F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE7201F1D7105CD0090F88F /* Post.swift */; };
+		4FE720231D71E5720090F88F /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE720221D71E5720090F88F /* PostCell.swift */; };
+		4FE720261D725B6C0090F88F /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE720251D725B6C0090F88F /* AddPostVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F75E0551D748D6500168F87 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		4FE71FED1D7105690090F88F /* Hooqd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hooqd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE71FF01D7105690090F88F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FE71FF21D7105690090F88F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,9 @@
 		4FE7200C1D7105690090F88F /* HooqdUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HooqdUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE720101D7105690090F88F /* HooqdUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HooqdUITests.swift; sourceTree = "<group>"; };
 		4FE720121D7105690090F88F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FE7201F1D7105CD0090F88F /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		4FE720221D71E5720090F88F /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		4FE720251D725B6C0090F88F /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F75E0541D73BC6500168F87 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4F75E0551D748D6500168F87 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		4FE71FE41D7105690090F88F = {
 			isa = PBXGroup;
 			children = (
@@ -97,11 +113,12 @@
 		4FE71FEF1D7105690090F88F /* Hooqd */ = {
 			isa = PBXGroup;
 			children = (
+				4F75E0541D73BC6500168F87 /* Services */,
+				4FE7201E1D7105870090F88F /* Model */,
+				4FE720211D71E4F40090F88F /* View */,
+				4FE720241D725AC10090F88F /* Controller */,
 				4FE71FF01D7105690090F88F /* AppDelegate.swift */,
-				4FE71FF21D7105690090F88F /* ViewController.swift */,
-				4FE71FF41D7105690090F88F /* Main.storyboard */,
 				4FE71FF71D7105690090F88F /* Assets.xcassets */,
-				4FE71FF91D7105690090F88F /* LaunchScreen.storyboard */,
 				4FE71FFC1D7105690090F88F /* Info.plist */,
 			);
 			path = Hooqd;
@@ -123,6 +140,33 @@
 				4FE720121D7105690090F88F /* Info.plist */,
 			);
 			path = HooqdUITests;
+			sourceTree = "<group>";
+		};
+		4FE7201E1D7105870090F88F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4FE7201F1D7105CD0090F88F /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		4FE720211D71E4F40090F88F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4FE720221D71E5720090F88F /* PostCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4FE720241D725AC10090F88F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4FE71FF91D7105690090F88F /* LaunchScreen.storyboard */,
+				4FE71FF41D7105690090F88F /* Main.storyboard */,
+				4FE71FF21D7105690090F88F /* ViewController.swift */,
+				4FE720251D725B6C0090F88F /* AddPostVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +300,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FE720201D7105CD0090F88F /* Post.swift in Sources */,
 				4FE71FF31D7105690090F88F /* ViewController.swift in Sources */,
+				4FE720261D725B6C0090F88F /* AddPostVC.swift in Sources */,
+				4F75E0561D748D6500168F87 /* DataService.swift in Sources */,
 				4FE71FF11D7105690090F88F /* AppDelegate.swift in Sources */,
+				4FE720231D71E5720090F88F /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +532,7 @@
 				4FE720171D7105690090F88F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4FE720181D7105690090F88F /* Build configuration list for PBXNativeTarget "HooqdTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +541,7 @@
 				4FE7201A1D7105690090F88F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4FE7201B1D7105690090F88F /* Build configuration list for PBXNativeTarget "HooqdUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +550,7 @@
 				4FE7201D1D7105690090F88F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
